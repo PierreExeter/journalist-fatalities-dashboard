@@ -2,15 +2,40 @@ services:
   - type: web
     name: metabase
     env: docker
-    repo: https://github.com/render-examples/metabase.git # optional
+    repo: https://github.com/PierreExeter/journalist-fatalities-dashboard # optional
     plan: standard # ensure that metabase has at least 2GB of RAM (defaults to starter)
     autoDeploy: false
+    healthCheck:
+      path: /api/health
+      intervalSeconds: 30
+      timeoutSeconds: 10
+      gracePeriodSeconds: 60
     envVars:
-      - key: MB_DB_CONNECTION_URI
+      - key: MB_DB_TYPE
+        value: postgres
+      - key: MB_DB_HOST
         fromDatabase:
-          name: elephant
-          property: connectionString
+          name: unesco_db
+          property: host
+      - key: MB_DB_PORT
+        fromDatabase:
+          name: unesco_db
+          property: port
+      - key: MB_DB_NAME
+        fromDatabase:
+          name: unesco_db
+          property: database
+      - key: MB_DB_USER
+        fromDatabase:
+          name: unesco_db
+          property: user
+      - key: MB_DB_PASS
+        fromDatabase:
+          name: unesco_db
+          property: password
+      - key: MB_SITE_URL
+        value: https://metabase.onrender.com
 databases:
-  - name: elephant
+  - name: unesco_db
     databaseName: metabasedb
     ipAllowList: [] # only allow internal connections
