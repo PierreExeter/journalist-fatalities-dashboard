@@ -83,7 +83,7 @@ graph TB
 ## 🔧 Installation & Deployment
 
 
-### Database Setup
+### 1. Database Setup
 
 1. Connect to postgres with user postgres
 ```bash
@@ -138,7 +138,7 @@ SELECT ID, "Title En", Countries, "Date", "Enquiry status" FROM journalists_sche
 CTRL + D to exit postgres.
 
 
-### Metabase Configuration
+### 2. Metabase Configuration
 
 1. Pull Metabase container
 
@@ -160,15 +160,10 @@ docker run -d -p 3000:3000 --network host --name metabase metabase/metabase
    - **Username**: `my-user`
    - **Password**: `my-password`
 
-Click Save.
+6. Create the questions and dashboard in Metabase GUI 
+(See [Metabase tutorial](https://www.youtube.com/watch?v=7esMaFvKGqo) for help).
 
-### Dashboard Creation
-
-Create the questions (visualisation) and dashboard in Metabase GUI.
-
-See [Metabase tutorial](https://www.youtube.com/watch?v=7esMaFvKGqo).
-
-### Cloud Deployment on Render
+### 3. Cloud Deployment on Render
 
 This project is production-ready and can be deployed directly to Render:
 
@@ -178,6 +173,6 @@ This project is production-ready and can be deployed directly to Render:
 See the Render [guide](https://render.com/docs/deploy-metabase) for Metabase deployment.
 
 
-### Credit
+## Credits
 
 *The [dataset](https://data.unesco.org/explore/dataset/fej001/information/?disjunctive_nationality=&disjunctive_gender=&disjunctive_local=&disjunctive_media=&disjunctive_country_title_en=&disjunctive_staff=&disjunctive_enquiry_status=&disjunctive_date_resolution=&disjunctive.nationality&disjunctive.gender&disjunctive.local&disjunctive.media&disjunctive.country_title_en&disjunctive.staff&disjunctive.enquiry_status&disjunctive.date_resolution) is from the Unesco datahub. The original Unesco dashboard can be found [here](https://www.unesco.org/en/safety-journalists/observatory/statistics?hub=72609).*
