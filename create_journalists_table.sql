@@ -70,5 +70,4 @@ COMMENT ON COLUMN journalists_schema.killed_journalists.UUID IS 'Unique identifi
 COMMENT ON COLUMN journalists_schema.killed_journalists."Country UUID" IS 'UUID for the country';
 
 -- Import command for CSV data
--- Run this command in psql after creating the table:
--- \copy journalists_schema.killed_journalists FROM 'data/fej001.csv' WITH (FORMAT csv, HEADER true, QUOTE '"', DELIMITER ',')
+\copy journalists_schema.killed_journalists FROM 'data/fej001.csv' WITH (FORMAT csv, HEADER true, QUOTE '"', DELIMITER ',')
