@@ -178,4 +178,6 @@ This project is production-ready and can be deployed directly to Render:
 See the Render [guide](https://render.com/docs/deploy-metabase) for Metabase deployment.
 
 
+### Credit
 
+*The [dataset](https://data.unesco.org/explore/dataset/fej001/information/?disjunctive_nationality=&disjunctive_gender=&disjunctive_local=&disjunctive_media=&disjunctive_country_title_en=&disjunctive_staff=&disjunctive_enquiry_status=&disjunctive_date_resolution=&disjunctive.nationality&disjunctive.gender&disjunctive.local&disjunctive.media&disjunctive.country_title_en&disjunctive.staff&disjunctive.enquiry_status&disjunctive.date_resolution) is from the Unesco datahub. The original Unesco dashboard can be found [here](https://www.unesco.org/en/safety-journalists/observatory/statistics?hub=72609).*
